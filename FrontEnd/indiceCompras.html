@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+
+    <title>Indice compras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="p-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #f7e7ce;">
+        <div class="container-fluid">
+            <!-- Logo de la navbar -->
+            <a class="navbar-brand cedarville-cursive-regular" href="paginaInicio.html">gincito home</a>
+        
+        <!-- Botón de menú en modo responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!-- Elementos alineados a la izquierda -->
+            <div class="navbar-nav">
+                <a class="nav-link active cedarville-cursive-regular" aria-current="page" href="indiceRecetas.html">Recetas</a>
+                <a class="nav-link cedarville-cursive-regular" href="indiceAlimento.html">Alimentos</a>
+            </div>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="mb-4 cedarville-cursive-regular" style="text-align: center;">Listado de alimentos a comprar</h2>
+        <div class="estilo1">
+
+            <label for="FiltroNombreAlimento">Nombre de un alimento:</label>   
+                <input type="text" id="FiltroNombreAlimento">
+                <h1></h1>
+            <label  style="padding-bottom: 15px;" for="FiltroTipoAlimento">Tipo de alimento:</label>
+                <input type="text" id="FiltroTipoAlimento">
+                <h1></h1>
+            <button style="width: 200px" type="button" id="btnFiltrar">Filtrar</button>
+
+            <button style="width: 200px" type="button" id="btnLimpiarFiltros">Limpiar filtros</button>
+
+        </div> 
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="elementosTable">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Cantidad faltante</th>
+                  <th>Costo</th>
+                  <th>Comprar</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                
+              </tfoot>
+            </table>
+          </div>
+          
+
+        <div style="text-align: center; font-size: 15px;" id="compraResumen">
+            
+            <div style="text-align: center;">
+                <h3> Costo total de la compra: </h3>
+                <p style="font-weight: bold; font-size: 20px; " id="costoTotal">0.00</p>
+                <button type="button" id="botonGenerarCompra">Comprar todos los productos</button>
+            </div>
+            <h1></h1>
+            
+            <div style="text-align: center; ">
+                <h3> Costo de la compra seleccionada: </h3>
+                <p style="font-weight: bold; font-size: 20px;" id="costoTotal2">0.00</p>
+                <button type="button" id="botonGenerarCompraPer">Comprar los productos seleccionados</button>
+            </div>
+        </div>
+        
+        
+        
+    </div> 
+
+    <!-- Include Bootstrap JS and dependencies of Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="request.js"></script>
+    <script src="indiceCompras.js"></script>
+</body>
+
+</html>

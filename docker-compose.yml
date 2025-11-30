@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: tpfinal-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: TPFINAL  # Crea la base de datos TPFINAL
+    command: --bind_ip_all  # Permite conexiones desde cualquier IP
+    networks:
+      - app_network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: tpfinal-gincito-app
+    depends_on:
+      - mongo
+    networks:
+      - app_network
+    environment:
+      MONGO_URI: "mongodb://mongo:27017"  # Apunta al contenedor mongo
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8081:80"  # Expone el puerto 80 de Nginx al 8081 del host
+    volumes:
+      - ./FrontEnd:/usr/share/nginx/html  # Monta la carpeta FrontEnd
+      - ./default.conf:/etc/nginx/conf.d/default.conf  # Archivo de configuración de Nginx
+    networks:
+      - app_network
+
+volumes:
+  mongo_data:
+
+networks:
+  app_network:
+    driver: bridge

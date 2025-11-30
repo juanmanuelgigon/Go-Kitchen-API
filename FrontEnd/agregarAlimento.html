@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+
+    <title>Agregar alimento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="p-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #f7e7ce;">
+        <div class="container-fluid">
+       
+            <a class="navbar-brand cedarville-cursive-regular" href="paginaInicio.html">gincito home</a>
+        
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link cedarville-cursive-regular" href="indiceAlimento.html""> Volver</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+      
+        <form id="formAlimento" class="mt-4">
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" id="NombreAlimento" placeholder="Nombre del Alimento" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" id="TipoAlimento" placeholder="Tipo de Alimento" required />
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control mb-2" id="PrecioUnitario" placeholder="Precio Unitario" step="0.01" required />
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control mb-2" id="CantidadActual" placeholder="Cantidad Actual" required />
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control mb-2" id="CantidadMinima" placeholder="Cantidad Mínima" required />
+            </div>
+
+            <div class="form-group">
+                <label>Momento:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Almuerzo" value="Almuerzo">
+                    <label class="form-check-label" for="Almuerzo">Almuerzo</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Merienda" value="Merienda">
+                    <label class="form-check-label" for="Merienda">Merienda</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Cena" value="Cena">
+                    <label class="form-check-label" for="Cena">Cena</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Desayuno" value="Desayuno">
+                    <label class="form-check-label" for="Desayuno">Desayuno</label>
+                </div>
+            </div>
+
+            <button type="submit" id="btnAgregar">Agregar Alimento</button>
+        </form>
+    </div>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="agregarAlimento.js"></script>
+    <script src="request.js"></script>
+</body>
+
+</html>

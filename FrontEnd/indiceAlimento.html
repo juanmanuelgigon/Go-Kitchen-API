@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+   
+    <title>Indice alimentos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="p-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #f7e7ce;">
+        <div class="container-fluid">
+            <a class="navbar-brand cedarville-cursive-regular" href="paginaInicio.html">gincito home</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active cedarville-cursive-regular" aria-current="page" href="indiceRecetas.html">Recetas</a>
+                <a class="nav-link cedarville-cursive-regular" href="indiceCompras.html">Compras</a>
+            </div>
+
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link cedarville-cursive-regular" href="agregarAlimento.html""> Agregue un alimento</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" >
+
+        <div class="card mb-4 p-3 filtros"style="background-color: #f7e7ce;" >
+            <h3 class="cedarville-cursive-regular">Alimento a buscar</h3>
+            <div class="form-group">
+                <label for="FiltroNombre">Nombre:</label>
+                <input type="text" class="form-control" name="FiltroNombre" id="FiltroNombre" placeholder="Filtrar por nombre" style="background-color: #f8f2e9;">
+            </div>
+            <button type="button" id="btnFiltrar">Filtrar</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="elementosTable">
+                <thead > 
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo de Alimento</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad Actual</th>
+                        <th>Cantidad Minima</th>
+                        <th>Momento</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody> 
+
+                </tbody>
+                <tfoot> 
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="indiceAlimento.js"></script>
+    <script src="request.js"></script>
+</body>
+
+</html>
